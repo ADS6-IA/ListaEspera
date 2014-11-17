@@ -1,0 +1,49 @@
+% 1. Title: Database for fitting lista espera
+% 
+
+@relation lista-espera
+
+@attribute maeTrabalha 			{sim,nao}
+@attribute possuiDeficiencia	{sim,nao}
+@attribute ehAbrigado			{sim,nao}
+@attribute renda				{ate-1-salario,ate-2-salarios,maior-2-salarios}
+@attribute classificacao		{recebeVaga,naoRecebeVaga,aguardaNaLista}
+
+@data
+
+sim,sim,sim,ate-1-salario,?
+nao,sim,sim,ate-1-salario,?
+nao,sim,sim,ate-1-salario,?
+nao,sim,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+sim,nao,sim,ate-1-salario,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,sim,nao,maior-2-salarios,?
+nao,nao,nao,ate-1-salario,?
+nao,nao,nao,ate-1-salario,?
+nao,nao,nao,ate-1-salario,?
+nao,nao,nao,ate-1-salario,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+nao,nao,nao,ate-2-salarios,?
+
+
+
