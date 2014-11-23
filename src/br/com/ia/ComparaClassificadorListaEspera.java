@@ -1,18 +1,23 @@
 package br.com.ia;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-import javax.swing.JOptionPane;
 
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.trees.Id3;
 import weka.core.Instance;
 import weka.core.Instances;
 
+/**
+ * @author
+ * Classe que compara o resultado da utilização do NaiveBayes e do Id3 (Arvore de decisao)
+ *
+ */
 public class ComparaClassificadorListaEspera {
 
 	/**
+	 * Exibe o resultado de classificacao correto atraves do lista-espera-gabarito,
+	 * utilizando uma base de teste para exibir os resultados aplicando o NaiveBayes e o Id3.
 	 * @param args
 	 * @throws Throwable 
 	 */

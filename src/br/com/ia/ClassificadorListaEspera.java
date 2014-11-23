@@ -1,18 +1,23 @@
 package br.com.ia;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 import javax.swing.JOptionPane;
 
-import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.trees.Id3;
 import weka.core.Instance;
 import weka.core.Instances;
 
+/**
+ * @author 
+ * Executa classificação de uma criança informando se ela já deve receber vaga,
+ * continuar aguardando na lista, ou se já deve ser descartada de receber a vaga.
+ *
+ */
 public class ClassificadorListaEspera {
 
 	/**
+	 * Executa a classificacao utilizando o Id3 (árvore de decisao) da biblioteca Weka.
 	 * @param args
 	 * @throws Throwable 
 	 */
@@ -25,10 +30,15 @@ public class ClassificadorListaEspera {
 		arvore.buildClassifier(conjuntoTreino);
 		
 		Instance exemploTeste = obtemInstancia(conjuntoTreino);
-		double resultNaive = arvore.classifyInstance(exemploTeste);
-		JOptionPane.showMessageDialog(null, convertClasse(resultNaive));
+		double result = arvore.classifyInstance(exemploTeste);
+		JOptionPane.showMessageDialog(null, convertClasse(result));
 	}
 	
+	/**
+	 * Converte o valor double retornado da classificacao em seu texto correspondente.
+	 * @param value valor retornado pelo algoritmo de classificacao.
+	 * @return
+	 */
 	private static String convertClasse(double value) {
 		if (value == 0) {
 			return "Exemplo já recebe vaga!";
@@ -39,6 +49,15 @@ public class ClassificadorListaEspera {
 		}
 	}
 	
+	/**
+	 * Controi uma instancia com os dados recebidos da tela.
+	 * @param conjuntoDados base de dados de treino
+	 * @param maeTrabalha parametro binario se mae trabalha ou nao
+	 * @param possuiDef parametro binario se criança possui deficiencia ou nao
+	 * @param ehAbrig parametro binario se criança mora em abrigo ou nao
+	 * @param renda parametro de faixas de rendas da casa
+	 * @return
+	 */
 	public static Instance constroiInstancia(Instances conjuntoDados, int maeTrabalha, int possuiDef, int ehAbrig, int renda) {
 		
 		Instance instancia = new Instance(5);
@@ -61,6 +80,11 @@ public class ClassificadorListaEspera {
 		}
 	}
 	
+	/**
+	 * Solicita o preenchimento de dados e retorna uma instancia carregada com eles.
+	 * @param conjuntoDados base de dados de treino.
+	 * @return instancia que sera classificada.
+	 */
 	public static Instance obtemInstancia(Instances conjuntoDados) {
 		int maeTrabalha = constroiPerguntasBinarias("A mãe trabalha? Digite: \n1 - Sim\n2 - Não");
 		int possuiDeficiencia = constroiPerguntasBinarias("A criança possui deficiência? Digite: \n1 - Sim\n2 - Não");
@@ -84,6 +108,11 @@ public class ClassificadorListaEspera {
 		
 	}
 	
+	/**
+	 * Constroi tela de pergunta para parametros que dependem de respostas binarias.
+	 * @param texto mensagem da pergunta
+	 * @return resposta enviada pelo usuario
+	 */
 	public static int constroiPerguntasBinarias(String texto) {
 		int valor = 0;
 		while (valor == 0 || valor > 2) {

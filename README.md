@@ -1,4 +1,24 @@
 ListaEspera
 ===========
 
-Classificador de Lista Espera utilizando √Årvore de Decis√£o
+Classificador de Lista Espera utilizando ¡rvore de Decis„o atravÈs da biblioteca Weka.
+SoluÁ„o proposta por:
+Eloyza Maria S. B. Sobrinho
+Sue Ellen Martins Padilla Santos
+
+
+Para executar a soluÁ„o:
+1- Ao lado direito no site, clique na opÁ„o "Download Zip".
+2- O Download da pasta compactada do projeto ser· feito em sua m·quina.
+3- Descompacte a pasta.
+
+Caso queira apenas executar a soluÁ„o:
+1- Execute o arquivo classificadorListaEspera.jar que se encontra na raiz do projeto e preencha os dados conforme solicitados.
+
+Case queira abrir o cÛdigo fonte:
+1- Tenha em sua m·quina a IDE Eclipse for Java Developers.
+2- V· ao menu File/Import/Existing projects into Workspace e localize onde est· salva a pasta do projeto.
+3- A classe ClassificadorListaEspera contÈm a soluÁ„o de classificaÁ„o proposta para o problema.
+4- A classe ComparaClassificadorListaEspera contÈm uma comparaÁ„o da aplicaÁ„o do algoritmo com ¡rvore decis„o utilizado,
+com o algoritmo Naive Bayes. 
+
