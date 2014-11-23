@@ -3,8 +3,8 @@ ListaEspera
 
 Classificador de Lista Espera utilizando Árvore de Decisão através da biblioteca Weka.
 Solução proposta por:
-Eloyza Maria S. B. Sobrinho
-Sue Ellen Martins Padilla Santos
+Eloyza Maria S. B. Sobrinho\n
+Sue Ellen Martins Padilla Santos<br/>
 
 
 Para executar a solução:
